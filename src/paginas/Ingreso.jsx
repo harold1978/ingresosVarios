@@ -1,6 +1,7 @@
 import React from 'react'
-import ListaIngresos from '../componentes/ListaIngresos'
+
 import { NavLink } from 'react-router-dom'
+import ListaIngresos from '../componentes/ingresos/lista/ListaIngresos'
 
 const Ingreso = () => {
     return (

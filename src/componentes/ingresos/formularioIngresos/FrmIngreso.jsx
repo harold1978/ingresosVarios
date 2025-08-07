@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const FrmIngreso = () => {
-    const handleChange = () => { }
-    const handleSubmit = () => { }
+    const [ingreso, setIngreso] = useState({ fecha: "", descripcion: "", monto: "", categoria: "" });
+
+    const handleChange = (e) => {
+        console.log(e.target.name, e.target.value);
+        const { name, value } = e.target;
+        // const name = e.target.name;
+        // const value = e.target.value;
+        setIngreso({ ...ingreso, [name]: value });
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(ingreso);
+        localStorage.setItem('ingreso', JSON.stringify(ingreso));
+    }
     return (
         <>
             <form onSubmit={handleSubmit} className="card p-4 bg-light rounded shadow-sm">

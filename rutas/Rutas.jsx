@@ -4,7 +4,8 @@ import Navegacion from '../src/componentes/Navegacion'
 import Ingreso from '../src/paginas/ingreso'
 import Gastos from '../src/paginas/Gastos'
 import Foot from '../src/componentes/Foot'
-import FrmIngreso from '../src/componentes/FrmIngreso'
+import FrmIngreso from '../src/componentes/ingresos/formularioIngresos/FrmIngreso'
+
 
 export const Rutas = () => {
     return (
